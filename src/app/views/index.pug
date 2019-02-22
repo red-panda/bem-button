@@ -1,0 +1,177 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title BEM-button
+        link(href="css/app.css" rel="stylesheet")
+    body
+        .container
+            h1 BEM-buttons
+            .buttons
+                .btn-group
+                    h2.btn-group__title
+                        | Primary
+                    ul.btn-group__list
+                        li.btn-group__item
+                            button.btn.btn--sm
+                                .btn__text
+                                    | Small
+                        li.btn-group__item
+                            button.btn
+                                .btn__text
+                                    | Normal
+                        li.btn-group__item
+                            button.btn.btn--md
+                                .btn__text
+                                    | Medium
+                        li.btn-group__item
+                            button.btn.btn--lg
+                                .btn__text
+                                    | Large
+                .btn-group
+                    h2.btn-group__title
+                        | Primary active
+                    ul.btn-group__list
+                        li.btn-group__item
+                            button.btn.btn--sm.btn--active
+                                .btn__text
+                                    | Small
+                        li.btn-group__item
+                            button.btn.btn--active
+                                .btn__text
+                                    | Normal
+                        li.btn-group__item
+                            button.btn.btn--md.btn--active
+                                .btn__text
+                                    | Medium
+                        li.btn-group__item
+                            button.btn.btn--lg.btn--active
+                                .btn__text
+                                    | Large
+                .btn-group
+                    h2.btn-group__title
+                        | Ghost
+                    ul.btn-group__list
+                        li.btn-group__item
+                            button.btn.btn--ghost.btn--sm
+                                .btn__text
+                                    | Small
+                        li.btn-group__item
+                            button.btn.btn--ghost
+                                .btn__text
+                                    | Normal
+                        li.btn-group__item
+                            button.btn.btn--ghost.btn--md
+                                .btn__text
+                                    | Medium
+                        li.btn-group__item
+                            button.btn.btn--ghost.btn--lg
+                                .btn__text
+                                    | Large
+
+                .btn-group
+                    h2.btn-group__title
+                        | Ghost active
+                    ul.btn-group__list
+                        li.btn-group__item
+                            button.btn.btn--ghost.btn--sm.btn--active
+                                .btn__text
+                                    | Small
+                        li.btn-group__item
+                            button.btn.btn--ghost.btn--active
+                                .btn__text
+                                    | Normal
+                        li.btn-group__item
+                            button.btn.btn--ghost.btn--md.btn--active
+                                .btn__text
+                                    | Medium
+                        li.btn-group__item
+                            button.btn.btn--ghost.btn--lg.btn--active
+                                .btn__text
+                                    | Large
+
+                .btn-group
+                    h2.btn-group__title
+                        | Primary disabled
+                    ul.btn-group__list
+                        li.btn-group__item
+                            button.btn.btn--sm(disabled)
+                                .btn__text
+                                    | Small
+                        li.btn-group__item
+                            button.btn(disabled)
+                                .btn__text
+                                    | Normal
+                        li.btn-group__item
+                            button.btn.btn--md(disabled)
+                                .btn__text
+                                    | Medium
+                        li.btn-group__item
+                            button.btn.btn--lg(disabled)
+                                .btn__text
+                                    | Large
+
+                .btn-group
+                    h2.btn-group__title
+                        | Ghost disabled
+                    ul.btn-group__list
+                        li.btn-group__item
+                            button.btn.btn--ghost.btn--sm(disabled)
+                                .btn__text
+                                    | Small
+                        li.btn-group__item
+                            button.btn.btn--ghost(disabled)
+                                .btn__text
+                                    | Normal
+                        li.btn-group__item
+                            button.btn.btn--ghost.btn--md(disabled)
+                                .btn__text
+                                    | Medium
+                        li.btn-group__item
+                            button.btn.btn--ghost.btn--lg(disabled)
+                                .btn__text
+                                    | Large
+
+                .btn-group
+                    h2.btn-group__title
+                        | Primary links
+                    ul.btn-group__list
+                        li.btn-group__item
+                            a.btn.btn--sm(href="#")
+                                .btn__text
+                                    | Small
+                        li.btn-group__item
+                            a.btn(href="#")
+                                .btn__text
+                                    | Normal
+                        li.btn-group__item
+                            a.btn.btn--md(href="#")
+                                .btn__text
+                                    | Medium
+                        li.btn-group__item
+                            a.btn.btn--lg(href="#")
+                                .btn__text
+                                    | Large
+
+                .btn-group
+                    h2.btn-group__title
+                        | Ghost links
+                    ul.btn-group__list
+                        li.btn-group__item
+                            a.btn.btn--ghost.btn--sm(href="#")
+                                .btn__text
+                                    | Small
+                        li.btn-group__item
+                            a.btn.btn--ghost(href="#")
+                                .btn__text
+                                    | Normal
+                        li.btn-group__item
+                            a.btn.btn--ghost.btn--md(href="#")
+                                .btn__text
+                                    | Medium
+                        li.btn-group__item
+                            a.btn.btn--ghost.btn--lg(href="#")
+                                .btn__text
+                                    | Large

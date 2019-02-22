@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+.btn {
+  $self: &;
+  @include text-btn;
+  margin: 0;
+  line-height: 1.5;
+  display: inline-block;
+  color: $COLOR_BACKGROUND_BASE;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $COLOR_LINK;
+  background-color: $COLOR_LINK;
+  border-radius: 10rem;
+  padding: 0.375em 2rem;
+  outline: none;
+  overflow: hidden;
+  user-select: none;
+  white-space: nowrap;
+  transition: background-color $TRANSITION_DURATION ease-in-out, border-color $TRANSITION_DURATION ease-in-out;
+  min-width: 14rem;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @include mq(lg) {
+    &:hover {
+      color: $COLOR_BACKGROUND_BASE;
+      border-color: shade($COLOR_LINK, 5%);
+      background-color: shade($COLOR_LINK, 5%);
+      padding: 0.375em 2rem;
+      transition: background-color $TRANSITION_DURATION ease-in-out, border-color $TRANSITION_DURATION ease-in-out;
+    }
+  }
+
+  &:active,
+  &--active {
+    color: $COLOR_BACKGROUND_BASE;
+    border-color: shade($COLOR_LINK, 10%);
+    background-color: shade($COLOR_LINK, 10%);
+    text-decoration: none;
+    padding: 0.375em 2rem;
+    transition: background-color $TRANSITION_DURATION ease-in-out, border-color $TRANSITION_DURATION ease-in-out;
+  }
+
+  &:focus,
+  &:visited {
+    outline: 0;
+    text-decoration: none;
+    span {
+      text-decoration: none;
+    }
+  }
+
+  @if $BTN_FOCUS == true {
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($COLOR_LINK, 0.5);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transition: none;
+
+    @include mq(lg) {
+      &:hover {
+        color: $COLOR_BACKGROUND_BASE;
+        border-color: $COLOR_LINK;
+        background-color: $COLOR_LINK;
+        transition: none;
+      }
+    }
+
+    &:active {
+      color: $COLOR_BACKGROUND_BASE;
+      border-color: $COLOR_LINK;
+      background-color: $COLOR_LINK;
+    }
+  }
+
+  &--sm {
+    @include text-sm;
+    line-height: 1.5;
+    min-width: 10rem;
+  }
+
+  &--md {
+    @include text-md;
+    line-height: 1.5;
+    min-width: 16rem;
+  }
+
+  &--lg {
+    @include text-lg;
+    line-height: 1.5;
+    min-width: 20rem;
+  }
+
+  &--ghost {
+    color: $COLOR_TEXT_BASE;
+    border-color: $COLOR_BTN_SECONDARY;
+    background-color: rgba($COLOR_TEXT_BASE, 0);
+
+    @include mq(lg) {
+      &:hover {
+        color: $COLOR_LINK;
+        border-color: shade($COLOR_LINK_SECONDARY, 5%);
+        background-color: rgba($COLOR_TEXT_BASE, 0);
+      }
+    }
+
+    &:active,
+    &#{$self}--active {
+      color: $COLOR_LINK;
+      border-color: shade($COLOR_LINK_SECONDARY, 5%);
+      background-color: rgba($COLOR_TEXT_BASE, 0.10);
+    }
+
+    &:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transition: none;
+
+      @include mq(lg) {
+        &:hover {
+          color: $COLOR_TEXT_BASE;
+          border-color: $COLOR_BTN_SECONDARY;
+          background-color: rgba($COLOR_TEXT_BASE, 0);
+          transition: none;
+        }
+      }
+
+      &:active {
+        color: $COLOR_TEXT_BASE;
+        border-color: $COLOR_BTN_SECONDARY;
+        background-color: rgba($COLOR_TEXT_BASE, 0);
+      }
+    }
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  /* Added just for IE consistency. Must be deleted because of doubled DOM nodes, if IE text-moving is not imported */
+  &__text {
+    position: relative;
+    pointer-events: none;
+  }
+}

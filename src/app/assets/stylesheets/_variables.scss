@@ -1,0 +1,65 @@
+$MQ_BREAKPOINTS: (
+        "sm": 767px,
+        "md": 768px,
+        "lg": 1024px
+);
+
+$MQ_INDENTS: (
+        "sm": 2rem,
+        "md": 3.9rem,
+        "lg": 5.5rem
+);
+
+$MQ_CONTAINER_WIDTHS: (
+        "sm": 100%,
+        "md": 100%,
+        "lg": 1280px
+);
+
+$MQ_CONTAINER_INDENTS: (
+        "sm": map-get($MQ_INDENTS, "sm"),
+        "md": map-get($MQ_INDENTS, "md"),
+        "lg": map-get($MQ_INDENTS, "lg")
+);
+
+$MQ_GRID_GUTTERS: (
+        "sm": map-get($MQ_INDENTS, "sm"),
+        "md": map-get($MQ_INDENTS, "md"),
+        "lg": map-get($MQ_INDENTS, "lg")
+);
+
+$MQ_GRID_GUTTERS_INNER: (
+        "sm": 3rem,
+        "md": 3rem,
+        "lg": 3rem
+);
+
+/* Link */
+//$COLOR_LINK: #E4002B;
+$COLOR_LINK: #2196F3;
+$COLOR_LINK_ACTIVE: #CC0026;
+$COLOR_LINK_SECONDARY: #B2B2B2;
+$COLOR_LINK_SECONDARY_ACTIVE: #E5E5E5;
+$COLOR_BTN_SECONDARY: #d9d9d9;
+$COLOR_BTN_OLD: #e3051e;
+
+/* Text */
+$COLOR_TEXT_BASE: #000;
+$COLOR_TEXT_SECONDARY: #333;
+$COLOR_TEXT_DATE: $COLOR_LINK_SECONDARY;
+
+/* Bacgrounds */
+$COLOR_BACKGROUND_BASE: #fff;
+$COLOR_BACKGROUND_IMPORTANT: #4D4D4D;
+$COlOR_BACKGROUND_SECONDARY: #F2F2F2;
+
+$FONT_FAMILY: Helvetica, Arial, sans-serif;
+$FONT_WEIGHT: normal;
+$FONT_WEIGHT_TITLE: bold;
+
+$TRANSITION_DURATION: 0.2s;
+$LETTER_SPACING: 0.15rem;
+
+$HEADER_HEIGHT_SM: 81px;
+$HEADER_HEIGHT_MD: 61px;
+$HEADER_HEIGHT_LG: 121px;
